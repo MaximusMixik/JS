@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задача №4
+  </title>
+</head>
+
+
+<body>
+
+  <h1>
+    Задача №4
+  </h1>
+  <p>Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).
+  </p>
+  <script>
+    // похідні данні
+    let oneProductCost = parseFloat(prompt("Ціна товару"))
+    let availableQuantityProducts = parseInt(prompt("Введіть необхідну кількість"))
+    const VAT = 0.05
+    // розрахунок загальної вартості
+    // let totalCostNoVAT = (parseFloat(oneProductCost) * parseInt(availableQuantityProducts))
+    let totalCostNoVAT = oneProductCost * availableQuantityProducts
+    // розрахунок загальної вартості ПДВ
+    let totlalVAT = totalCostNoVAT * VAT
+    // розрахунок загальної вартості з відрахуванням ПДВ
+    let totalCost = totalCostNoVAT - totlalVAT
+
+    // вивід данних
+    alert(
+      `
+    загальна вартість без ПДВ ${totalCostNoVAT} грн, \n
+    загальна вартість з відрахуваням ПДВ ${totalCost} грн, \n
+    загальна сума ПДВ ${totlalVAT} грн
+    `
+    )
+
+
+  </script>
+</body>
+
+</html>
