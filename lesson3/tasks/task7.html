@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №7
+  </h1>
+  <p>
+    З клавіатури вводиться номер місяця. Вивести до якої пори він відноситься
+  </p>
+  <script>
+    // monthNumber
+    // dataConvert
+
+    const monthNumber = parseInt(prompt('Введіть номер місяця, щоб ми точно вказали пору року'))
+    let dataConvert
+    switch (monthNumber) {
+      case 12:
+      case 1:
+      case 2: dataConvert = "Зима"
+        break;
+      case 3:
+      case 4:
+      case 5: dataConvert = "Весна"
+        break;
+      case 6:
+      case 7:
+      case 8: dataConvert = "Літо"
+        break;
+      case 9:
+      case 10:
+      case 11: dataConvert = "Осінь"
+        break;
+      default: "Помилка"
+        break;
+    }
+    alert(dataConvert)
+  </script>
+</body>
+
+</html>

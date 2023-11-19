@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №3
+  </h1>
+  <p>
+    Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.
+  </p>
+  <script>
+    const min = 1, max = 5,
+      generatingNumber = min + Math.floor(Math.random() * (max - min + 1))
+    let myBet = parseInt(prompt('Відгадай рандомне чистло від 1 до 5'))
+
+    if (myBet === generatingNumber)
+      alert(`Вітаю ти вгадав, рандомне число - ${generatingNumber} співпадає з твоїм - ${myBet}`)
+    else {
+      alert(`Нажаль не вгадав, рандомне число - ${generatingNumber} не співпадає з твоїм - ${myBet}`)
+      myBet = parseInt(prompt('Спроба №2'))
+      if (myBet === generatingNumber)
+        alert(`Вітаю ти вгадав рандомне число - ${generatingNumber} співпадає з твоїм - ${myBet}`)
+      else
+        alert(`Нажаль не вгадав, рандомне число - ${generatingNumber} не співпадає з твоїм - ${myBet}`)
+    }
+
+
+  </script>
+</body>
+
+</html>
