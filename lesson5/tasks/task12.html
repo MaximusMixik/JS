@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №1
+  </h1>
+  <p>
+    Задача 9. Користувач загадує число. Комп’ютер задає питання поки не вгадає число користувача (використати confirm).
+  </p>
+  <script>
+    const userNum = parseInt(prompt('Загадайте число'))
+
+    for (let i = 1; ; i++) {
+      const min = 1,
+        max = 100,
+        random = Math.floor(Math.random() * (max - min + 1) + min),
+        botValue = confirm(` ${random}, я вгадав?`)
+
+      if (botValue === true) {
+        alert('Компютер відгадав число!!!')
+        //   alert(`
+        // ви загадали число - ${userNum} 
+        //  Спроба   - ${i}
+        // число комп'ютера -  ${random}`)
+        break
+      }
+      else {
+        alert(`
+      ви загадали число - ${userNum} 
+       Спроба   - ${i}
+      число комп'ютера -  ${random}`)
+      }
+    }
+  </script>
+</body>
+
+</html>

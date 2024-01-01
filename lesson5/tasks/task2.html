@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №1
+  </h1>
+  <p>Задача -1. Вивести на екран номери місяців весни і літа (від 3 до 8)
+    <script>
+
+      let month = 0;
+
+      for (i = 3; i <= 8; i++) {
+        switch (i) {
+          case 3:
+          case 4:
+          case 5: month = `<p>${i} місяць весни</p>`
+            break
+          // case 6:
+          // case 7:
+          // case 8: month = `<p>${i} місяць літа</p>`
+          //   break
+          // default: month = 'inccorect'
+          //   break
+          default: month = `<p>${i} місяць літа</p>`
+            break;
+        }
+        document.write(month)
+      }
+    </script>
+</body>
+
+</html>

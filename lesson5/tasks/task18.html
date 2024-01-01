@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №15
+  </h1>
+  <p>
+    Задача 15. Користувача поступово вводить показники температури протягом року. Знайти середню температуру.
+  </p>
+  <script>
+    let summ = 0,
+      i = 0
+
+    for (; ;) {
+      const userTempValue = parseInt(prompt('Показники температури')),
+        userResponse = confirm('Продувжуємо чи закінчимо розрахунок?')
+      if (userResponse === false) {
+        summ += userTempValue
+        i++
+        break
+      }
+      else {
+        summ += userTempValue
+        i++
+      }
+    }
+
+    const difference = summ / i
+    alert(`середня температура ${difference}`)
+
+  </script>
+</body>
+
+</html>

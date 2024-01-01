@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  table,
+  td {
+    border: 1px solid black;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+  }
+</style>
+
+<body>
+  <h1>
+    Задача №1
+  </h1>
+  <p>
+    13. Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі розміром N*M. Маючи К снарядів
+    користувач
+    намагається потопити корабель.
+
+  </p>
+  <script>
+
+    const min = 1,
+      max = 100,
+      randomShipPos = Math.floor(Math.random() * (max - min + 1) + min)
+    let shellsNumber = parseInt(prompt("кількість снарядів")),
+      count = 1
+
+    // поле бою
+    document.write(`<table><tbody>`)
+    for (let r = 0; r <= 9; r++) {
+      document.write(`<tr>`)
+      for (let c = 0; c <= 9; c++) {
+        if (randomShipPos === count) document.write(`<td style="color:white; background-color:red;"> ${count++}</td>`)
+        else document.write(`<td>${count++}</td>`)
+      }
+      document.write(`</tr>`)
+    }
+    document.write(`</tbody></table>`)
+
+
+    // трохи жульнічества для перевірки
+    // alert(randomShipPos)
+
+    // логіка
+    for (shellsNumber; 0 < shellsNumber;) {
+      const userShot = parseInt(prompt('where you shooting?'))
+      if (randomShipPos === userShot) {
+        alert('you win!!!')
+        break
+      }
+      else {
+        --shellsNumber
+        if (shellsNumber === 0) {
+          alert('game over')
+          break
+        } else alert(`try again! last ${shellsNumber}`)
+      }
+    }
+// розв'язок з уроку 6
+// const rows = parseInt(prompt('fields rows')),
+//   columns = parseInt(prompt('fields columns')),
+//   min = 1,
+//   shipRowPosition = Math.floor(Math.random() * (rows - min + 1) + 1),
+//   shipColumnPosition = Math.floor(Math.random() * (columns - min + 1) + 1)
+// let userColumnShot, userRowShot,
+//   shellsNumber = parseInt(prompt('shells number'))
+// do {
+//   userRowShot = parseInt(prompt('Where you shooting (row)'))
+//   userColumnShot = parseInt(prompt('Where you shooting (column)'))
+//   shellsNumber--
+//   if (userRowShot === shipRowPosition && userColumnShot === shipColumnPosition) alert('Winner!!!')
+//   else alert('try once time')
+// } while (!(userRowShot === shipRowPosition && userColumnShot === shipColumnPosition) && shellsNumber > 0);
+  </script>
+</body>
+
+</html>

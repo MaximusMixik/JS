@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №1
+  </h1>
+  <p>
+    Задача 10. Знайти суму всіх непарних чисел, що знаходяться між заданими користувачем числами.
+
+  </p>
+  <script>
+
+    let userMin = parseInt(prompt('мінімальне число')),
+      summ = 0;
+
+    const userMax = parseInt(prompt('максимальне число')),
+      userNumbers = userMax - userMin
+    for (let i = 0; i <= userNumbers; i++) {
+      if (userMin % 2 === 1) {
+        summ += userMin;
+        userMin++;
+      }
+      else {
+        userMin++
+      }
+    }
+    alert(`сума всіх непарних чисел що знаходяться між заданими числами ${summ}`)
+  </script>
+</body>
+
+</html>

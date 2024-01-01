@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  table,
+  td {
+    border: 1px solid black;
+  }
+</style>
+
+<body>
+  <h1>
+    Задача №1
+  </h1>
+  <p>Задача 5. Вивести таблицю
+  </p>
+  <script>
+
+    let myNum = 1;
+    document.write('<table><tbody>')
+    for (let i = 0; i < 3; i++) {
+      document.write('<tr> ')
+      for (let a = 0; a < 3; a++) {
+        document.write(`<td> ${myNum++} </td>`)
+      }
+      document.write('</tr> ')
+    }
+    document.write('</tbody> </table>')
+
+  </script>
+  <!-- <script>
+    document.write('<table><tbody>')
+    for (i = 1; i <= 9; i++) {
+
+      if (i === 3 || i === 6 || i === 9) {
+        document.write(` <td>${i} </td>`)
+        document.write('</tr>')
+      }
+      else if (i === 2 || i === 5 || i === 8) {
+        document.write(` <td>${i} </td>`)
+      }
+      else {
+        document.write('<tr>')
+        document.write(` <td>${i} </td>`)
+      }
+    }
+    document.write('</tbody> </table>')
+  </script>
+
+  <script>
+    document.write('<table><tbody>')
+    for (i = 1; i <= 9; i++) {
+      switch (i) {
+        case 1:
+          document.write('<tr>')
+          document.write(` <td>${i} </td>`)
+          break
+        case 2:
+          document.write(` <td>${i} </td>`)
+          break
+        case 3:
+          document.write(` <td>${i} </td>`)
+          document.write('</tr>')
+          break
+        case 4:
+          document.write('<tr>')
+          document.write(` <td>${i} </td>`)
+          break
+        case 5:
+          document.write(` <td>${i} </td>`)
+          break
+        case 6:
+          document.write(` <td>${i} </td>`)
+          document.write('</tr>')
+          break
+        case 7:
+          document.write('<tr>')
+          document.write(` <td>${i} </td>`)
+          break
+        case 8:
+          document.write(` <td>${i} </td>`)
+          break
+        case 9:
+          document.write(` <td>${i} </td>`)
+          document.write('</tr>')
+          break
+      }
+    }
+    document.write('</tbody> </table>')
+  </script> -->
+  <!-- <script>
+    document.write('<table><tbody>')
+    let i = 1
+    document.write('<tr>')
+    for (i; i <= 3; i++) {
+      document.write(` <td> ${i} </td>`)
+    }
+    document.write('</tr>')
+    for (i; i <= 6; i++) {
+      document.write(` <td> ${i} </td>`)
+    }
+    document.write('</tr>')
+    for (i; i <= 9; i++) {
+      document.write(` <td> ${i} </td>`)
+    } 6
+    document.write('</tbody> </table>')
+  </script> -->
+  <!-- <script>
+    document.write('<table><tbody>')
+    let i = 1
+    document.write('<tr>')
+    for (i; i <= 3; i++) {
+      document.write(` <td> ${i} </td>`)
+    }
+    document.write('</tr>')
+    for (i; i <= 6; i++) {
+      document.write(` <td> ${i} </td>`)
+    }
+    document.write('</tr>')
+    for (i; i <= 9; i++) {
+      document.write(` <td> ${i} </td>`)
+    } 
+    document.write('</tbody> </table>')
+  </script> -->
+
+
+</body>
+
+</html>

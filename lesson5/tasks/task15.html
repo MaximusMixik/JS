@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  img {
+    width: 80px;
+    height: 80px;
+  }
+</style>
+
+<body>
+  <h1>
+    Задача №12
+  </h1>
+  <!-- <img src="../img/bar.jpg" alt="bar">
+      <img src="../img/cherry.jpg" alt="cherry">
+      <img src="../img/clever.jpg" alt="clever">
+      <img src="../img/money.jpg" alt="money"> -->
+  <p>
+    Задача 12. Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у кожній позиції вибирається як одне
+    з
+    чотирьох зображень. Вивести ці зображення і повідомити виграш користувача (три перших зображення 100 грн, три других
+    –
+    200, три третіх – 500, три четвертих зображення – 1000грн). Використати цикли і switch (для вибору зображення за
+    номером).
+  </p>
+
+  <script>
+
+
+
+    const min = 1,
+      max = 4
+
+    let result, bar = cherry = clever = money = 0
+
+    for (let i = 1; i <= 3; i++) {
+      const random = Math.floor(Math.random() * (max - min + 1) + min)
+      let pos
+      switch (random) {
+        case 1: pos = '<img src="../img/bar.jpg" alt="bar">',
+          bar++
+          break
+        case 2: pos = '<img src="../img/cherry.jpg" alt="cherry">',
+          cherry++
+          break
+        case 3: pos = '<img src="../img/clever.jpg" alt="clever">',
+          clever++
+          break
+        default: pos = '<img src="../img/money.jpg" alt="money">',
+          money++
+          break
+      }
+      pos = document.write(`${pos}`)
+    }
+
+    if (bar === 3) result = 100;
+    else if (cherry === 3) result = 200;
+    else if (clever === 3) result = 500;
+    else if (money === 3) result = 1000;
+    // else result = 0
+
+    (isFinite(result)) ? document.write(`<h1> Ви виграли ${result} грн</h1>`) : document.write('<h1> Спробуйте ще </h1>')
+
+
+
+    if (isFinite(result)) document.write(`<h1> Ви виграли ${result} грн</h1>  `)
+    else document.write('<h1> Спробуйте ще </h1>')
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

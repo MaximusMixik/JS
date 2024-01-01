@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №17
+  </h1>
+  <p>
+    14. Каса. Користувачу повідомляють суму, яку йому треба сплатити. Користувач поступово вводить суму грошей до тих
+    пір,
+    поки суми не буде достатньо для оплати товарів (кожного разу користувачу повідомляють, яку ще суму потрібно ввести).
+
+  </p>
+  <script>
+    let totalSumm = 6000
+    for (let i = 0; i <= totalSumm;) {
+      const valueToPay = parseInt(prompt(`яку суму ви бажаєте оплатити цього разу? Заборгованість ${totalSumm}`))
+      if (totalSumm < valueToPay) {
+        const balance = valueToPay - totalSumm
+        alert(`Борг сплачено, отримайте вашу здачу ${balance}`)
+        break
+      }
+      else if (totalSumm === valueToPay) {
+        totalSumm -= valueToPay
+        alert('Борг сплачено')
+        break
+      }
+      else totalSumm -= valueToPay
+    }
+
+
+
+  </script>
+</body>
+
+</html>

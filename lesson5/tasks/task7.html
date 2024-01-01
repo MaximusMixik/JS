@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<style>
+  table,
+  td {
+    border: 1px solid black;
+  }
+</style>
+
+<body>
+  <h1>
+    Задача №1
+  </h1>
+  <p>Задача 4. Вивести таблицю з 3 рядків і 7 стовпців
+  </p>
+
+  <script>
+    document.write(`<table><tbody>`)
+    for (let i = 0; i < 3; i++) {
+      document.write(`<tr>`)
+      for (let b = 1; b <= 7; b++) {
+        document.write(`<td>${b}</td>`)
+      }
+      document.write(`</tr>`)
+    }
+    document.write(`</tbody></table>`)
+  </script>
+</body>
+
+</html>
