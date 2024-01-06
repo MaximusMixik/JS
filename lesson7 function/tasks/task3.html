@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №3
+  </h1>
+  <p>
+    Задача 2. Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.
+  </p>
+  <script>
+
+    function weekDays(day) {
+      let result
+      switch (day) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5: result = 'Робочий!!!'
+          break
+        case 6:
+        case 7: result = 'Вихідний)'
+          break
+        default: result = 'Помилка'
+          break
+      }
+      return result
+    }
+    let userValue = parseInt(prompt('за номером дня дозволяє з’ясувати чи є цей день робочим'))
+    alert(` Цей день ${weekDays(userValue)}`)
+
+  </script>
+</body>
+
+</html>

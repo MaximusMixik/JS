@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №11
+  </h1>
+  <p>
+    Задача 10. Дано покази температур (довільна кількість). Розробити функцію, яка дозволить знайти середнє значення для
+    додатних показів температури.
+  </p>
+  <script>
+
+    let tempCount = 0
+
+    function tempValues() {
+      let userPerDayTemp = tempSum = 0
+      for (; ;) {
+        userPerDayTemp = parseInt(prompt('покази температур(довільна кількість), \n введіть 100 щоб закінчити і підрахувати'))
+        if (userPerDayTemp === 100) break
+        else {
+          tempSum += userPerDayTemp
+          tempCount++
+        }
+      }
+      return tempSum / tempCount
+    }
+    alert(`Середня температура ${tempValues().toFixed(2)}ºC, за ${tempCount} днів`)
+
+
+  </script>
+</body>
+
+</html>

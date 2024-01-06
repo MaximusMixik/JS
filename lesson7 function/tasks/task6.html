@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №6
+  </h1>
+  <p>
+    Задача 5. Створити окремі функції, які переводять:
+    Сантиметри у дюйми;
+    Кілограми у фунти;
+    Кілометри у милі.
+  </p>
+  <script>
+
+    let centimetersToInches = (centimeters = 0) => {
+      let result
+      result = centimeters / 2.54
+      return result.toFixed(3)
+    }
+    let kilogramsToPounds = (kilograms = 0) => {
+      let result
+      result = kilograms * 2.205
+      return result.toFixed(3)
+    }
+    let kilometersInMile = (kilometers = 0) => {
+      let result
+      result = kilometers / 1.609
+      return result.toFixed(3)
+    }
+
+    let userCentimeters = parseFloat(prompt('Перевести Сантиметри у дюйми')),
+      userKilograms = parseFloat(prompt('Перевести  Кілограми у фунти')),
+      userKilometers = parseFloat(prompt('Перевести  Кілометри у милі'))
+
+    alert(`${userCentimeters} Сантиметри у дюйми = ${centimetersToInches(userCentimeters)}дюйми `)
+    alert(`${userKilograms} Кілограми у фунти = ${kilogramsToPounds(userKilograms)}фунти `)
+    alert(`${userKilometers} Кілометри у милі = ${kilometersInMile(userKilometers)}милі `)
+
+
+  </script>
+</body>
+
+</html>

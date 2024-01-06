@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №5
+  </h1>
+  <p>
+    Задача 4. Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: кількість парних,
+    кількість додатних, кількість більших за 100.
+  </p>
+  <script>
+
+    function multiFunction(num1, num2, num3) {
+      let evenNumbers = positiveNumbers = numberGreaterHundred = 0
+
+      if (num1 % 2 === 0) evenNumbers++
+      if (num2 % 2 === 0) evenNumbers++
+      if (num3 % 2 === 0) evenNumbers++
+
+      if (num1 > 0) positiveNumbers++
+      if (num2 > 0) positiveNumbers++
+      if (num3 > 0) positiveNumbers++
+
+      if (num1 > 100) numberGreaterHundred++
+      if (num2 > 100) numberGreaterHundred++
+      if (num3 > 100) numberGreaterHundred++
+
+      return [evenNumbers, positiveNumbers, numberGreaterHundred]
+    }
+
+    const num1 = parseFloat(prompt('Введіть 1 число')),
+      num2 = parseFloat(prompt('Введіть 2 число')),
+      num3 = parseFloat(prompt('Введіть 3 число'))
+
+    let functionValue = multiFunction(num1, num2, num3)
+
+    document.write(`<h2>Ми знайшли   <br>
+    кількість парних - ${functionValue[0]}  <br>
+    кількість додатних - ${functionValue[1]}   <br>
+    кількість більших за 100 - ${functionValue[2]} 
+    <h2>`)
+
+  </script>
+</body>
+
+</html>

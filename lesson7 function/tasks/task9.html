@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №9
+  </h1>
+
+  <p>
+    Задача 8. Створити функцію, яка виводить банер (у функцію передаються: зображення, заголовок та посилання, куди
+    переходимо при кліку на зображення (тег img повине знаходитись у середині тега a: <a> <img src=”шлях”> </a>
+  </p>
+  <script>
+    const myImage = '../img/img1.jpg',
+      myTitle = 'Заголовок ',
+      myLink = 'https://freelancehunt.com/'
+
+    function makeBanner(image, title, link) {
+      return document.write(`
+        <a href="${link}">
+          <img src='${image}' style="width: 400px; height: 400px;">
+        </a> <br>
+        <h2 >${title}</h2> 
+        `)
+    }
+
+    makeBanner(myImage, myTitle, myLink)
+
+  </script>
+</body>
+
+</html>

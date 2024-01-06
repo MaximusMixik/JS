@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №10
+  </h1>
+  <p>
+    Задача 9. Дано покази температур (довільна кількість). Розробити функцію, яка дозволить підрахувати кількість
+    від’ємних
+    показів температури.
+  </p>
+
+  <script>
+    function negativeTemp() {
+      let tempPerDay = negativeCount = 0
+      for (; ;) {
+        tempPerDay = parseInt(prompt('покази температур(довільна кількість), \n введіть 100 щоб закінчити і підрахувати'))
+        if (tempPerDay === 100) break
+        if (tempPerDay < 0) negativeCount++
+      }
+      return negativeCount
+    }
+
+    alert(`Від’ємні покази температури ${negativeTemp()} `)
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <script>
+    let negativeTempCount = 0
+    let randTemp = function (days) {
+      for (let i = 0; i < days; i++) {
+        const minTemp = -20,
+          maxTemp = 40,
+          randTemps = Math.floor(Math.random() * (maxTemp - minTemp + 1) + minTemp)
+        if (randTemps < 0) negativeTempCount++
+      }
+      return negativeTempCount
+    }
+
+    let randDaysNumber = function () {
+      const minDays = 1, maxDays = 60,
+        days = Math.floor(Math.random() * (maxDays - minDays + 1) + minDays)
+
+      // for (let i = 0; i < days; i++) {
+      // }
+      // return [days, randTemp(days)]
+      return randTemp(days)
+    }
+
+    // randDaysNumber()
+    // за ${ days } дні,
+
+    document.write(` від’ємних показів температури ${randDaysNumber()}`)
+
+
+
+    // let negativeTempCount = 0
+
+    // for (let i = 0; i < 10; i++) {
+    //   const minTemp = -20,
+    //     maxTemp = 20,
+    //     randTemps = Math.floor(Math.random() * (maxTemp - minTemp + 1) + minTemp)
+    //   if (randTemps < 0) negativeTempCount++
+    // }
+    // alert(negativeTempCount)
+  </script> -->
+</body>
+
+</html>
