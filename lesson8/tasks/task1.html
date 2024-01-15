@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №1
+  </h1>
+  <p>
+    Задача 1. Дано масив, який містить оцінки з К предметів.
+    Знайти середній бал і з’ясувати до якої категорії він відноситься
+    відмінник, (>10)
+    двійочник (має хоча би одну двійку === 2),
+    хорошист (оцінки добре і відмінно >8),
+    трійочник(є хоча би одна трійка === 3)
+
+  </p>
+  <script>
+    let lessonsArray = [10, 8, 4, 5, 12, 11, 6, 8, 12]
+
+    function middleValue(array) {
+      let res = sum = 0
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === 2) {
+          res = 'двійочник'
+          break
+        }
+        else if (array[i] === 3) {
+          res = 'трійочник'
+          break
+        }
+        else sum += array[i]
+      }
+
+      let middle = sum / array.length
+      if (middle > 10) res = 'відмінник'
+      else if (middle > 8) res = 'хорошист'
+
+      return isNaN(res) ? res : res = `Середній бал ${middle.toFixed(1)}`
+    }
+
+    let res = middleValue(lessonsArray)
+    alert(res);
+
+
+
+  </script>
+</body>
+
+</html>

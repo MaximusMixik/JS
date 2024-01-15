@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table,
+    td {
+      text-align: center;
+      border: 1px solid black;
+    }
+
+    table {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    Задача №8
+  </h1>
+  <p>
+    Задача 8. Дано одновимірний масив, у якому зберігається певна виграшна сума (елементи заповнюються випадковим чином
+    значеннями від -500 до 500).
+    Надаючи користувачу можливість вибирати номери елементів (поки він не відмовиться).
+    Знаходити сумарний виграш.
+  </p>
+  <script>
+
+    // масив з рандомними значенняим
+    function getWinArray(maxCount) {
+      const min = -500, max = 500, array = []
+      for (let i = 0; i < maxCount; i++) {
+        let randNumber = Math.floor(Math.random() * (max - min + 1) + min)
+        array.push(randNumber)
+      }
+      return array
+    }
+    // виклик  масиву з рандомними значенняим
+    const randomWin = getWinArray(11)
+
+    // візуалізація рандомного вибору
+    function getVisualisation(array) {
+      document.write('<h2>Масив з рандомними значеннями (від -500 до 500)</h2><table><tbody><tr>')
+      for (let i = 0; i < array.length; i++) {
+        document.write(`<td>${array[i]}</td> `)
+      }
+      document.write('</table></tbody></tr><br>')
+    }
+    // виклик  візуалізація рандомного вибору
+    getVisualisation(randomWin)
+
+    // створення масиву з вибором користувача
+    function getUserChoice(array) {
+      let userValue = true, userVinArray = []
+      while (!isNaN(userValue)) {
+        userValue = parseInt(prompt(`можливість вибирати номери елементів від 0 до 10 `)) // ${randomWin}
+        if (userValue >= 0 && userValue <= 10) {
+          userVinArray.push(array[userValue])
+          alert(`Ви обрали ${array[userValue]}грн `)
+        } else if (!isNaN(userValue)) alert('Є вказаний діапазон, будь ласка притримуйтесь його!')
+      }
+      return userVinArray
+    }
+    // виклик створення масиву з вибором користувача
+    const userChoice = getUserChoice(randomWin)
+    document.write(`Значення які ви обрали : ${userChoice}`)
+
+
+    // загальний виграш/програш
+    function getTotalPrice(array) {
+      let sum = 0
+      for (let i = 0; i < array.length; i++) {
+        sum += array[i]
+      }
+      return sum
+    }
+
+    const totalPrice = getTotalPrice(userChoice)
+
+    document.write(
+      totalPrice > 0 ?
+        `<h1>Загальний виграш становить - ${totalPrice}грн</h1>` :
+        `<h1>Ви лишились винними казино ${Math.abs(totalPrice)}грн</h1>`)
+
+  </script>
+
+
+
+
+
+
+
+  <!-- <script>
+
+    let maxValue = 0
+
+    function getRandArray(numbers) {
+      const array = [],
+        min = -500, max = 500
+      for (let i = 0; i < numbers; i++) {
+        const randNumber = Math.floor(Math.random() * (max - min + 1) + min);
+        array.push(randNumber)
+      }
+      return array
+    }
+
+    function getUserChoice() {
+      const userPriseArray = []
+      let counter = 0
+      for (; ;) {
+        const userNumber = parseInt(prompt(`вибирати номери елементів бажано до 10, зараз вибрано  ${counter}, вибрано номери ${userPriseArray}`))
+        if (isNaN(userNumber)) break
+
+        // if (counter === 0) {
+        //   userPriseArray.push(userNumber)
+        //   counter++
+        // } else if (counter > 0) {
+        //   for (let i = 0; i < userPriseArray.length; i++) {
+        //     if(userPriseArray[i] !== userNumber) {
+
+        //     }
+        //     else if (userPriseArray[i] !== userNumber) {
+        //       userPriseArray.push(userNumber)
+        //       counter++
+        //       break
+        //     } 
+        //   }
+        // }
+
+        if (maxValue < userNumber) maxValue = userNumber
+
+        userPriseArray.push(userNumber)
+        counter++
+      }
+      return userPriseArray
+    }
+
+
+    function getTotalMoney(array) {
+      let total = 0
+      for (let i = 0; i < array.length; i++) {
+        total += array[i]
+      }
+      return total
+    }
+
+    const userChoice = getUserChoice()
+    document.write(`Вибір користувача ${userChoice}  <br>`)
+
+    const randWinArray = getRandArray(maxValue)
+    document.write(` масив, у якому зберігається виграшна сума ${randWinArray} <br>`)
+
+    const totalMoney = getTotalMoney(randWinArray)
+    document.write(totalMoney > 0 ? `Ви виграли ${totalMoney}грн` : `Ви лишились винні казино ${Math.abs(totalMoney)}грн, якщо довбень грай далі)`)
+
+
+
+
+  </script> -->
+</body>
+
+</html>

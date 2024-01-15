@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №1
+  </h1>
+  <p>
+    Задача 5. Дано послідовність оцінок учня.
+    Підрахувати кількість:
+    1) двійок
+    2) кількість хороших оцінок (добре, відмінно);
+    3) кількість оцінок, які нижче середнього.
+
+  </p>
+  <script>
+
+    const grades = [10, 8, 4, 5, 12, 11, 6, 8, 12]
+    document.write(`${grades} <br> `)
+
+    //  1)Підрахувати кількість двійок
+    function dyadNumbers(array) {
+      let count = 0
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === 2) count++
+      }
+      return count
+    }
+
+    const studentGrades = dyadNumbers(grades)
+    document.write(studentGrades === 0 ? 'Нема двійок <br>' : `Кількість двійок - ${studentGrades} <br>`)
+
+    //  1)Підрахувати кількість хороших оцінок (добре, відмінно);
+
+    function fineNumbers(array) {
+      let count = 0
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] > 8) count++
+      }
+      return count
+    }
+
+    const studentFineGrades = fineNumbers(grades)
+    document.write(` кількість хороших оцінок - ${studentFineGrades} <br>`)
+
+    //  1) Підрахувати  кількість оцінок, які нижче середнього.
+    function midValue(array) {
+      let sum = 0
+      for (let i = 0; i < array.length; i++) sum += array[i]
+      return sum / array.length
+    }
+
+    function midNumbers(value, array) {
+      let count = 0
+      for (let i = 0; i < array.length; i++)  if (array[i] < value) count++
+      return count
+    }
+
+    const studentMidValue = midValue(grades)
+    const studentMidGrades = midNumbers(studentMidValue, grades)
+    document.write(` кількість оцінок, які нижче середнього - ${studentMidGrades} `)
+
+
+  </script>
+</body>
+
+</html>

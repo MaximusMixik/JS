@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №1
+  </h1>
+  <p>
+    Задача 9. Морський бій.
+
+    Користувач вводить кількість клітинок одновимірного масиву та кількість одиночних кораблів.
+
+    Комп’ютер довільно розміщує ці одиночні кораблі у масиві по один у клітинці
+    (якщо у клітинці 0, то клітинка пуста, якщо 1 – то це означає, що там є корабель.
+
+    Користувач вводить номер клітинки, куди стріляє. Гра продовжується до тих пір,
+    поки не будуть потоплені усі кораблі.
+
+  </p>
+
+  <script>
+
+
+    // створення масиву
+
+    function getField() {
+      const fieldCount = parseInt(prompt('кількість клітинок одновимірного масиву'))
+      const field = new Array(fieldCount)
+      for (let i = 0; i < field.length; i++) {
+        field[i] = 0
+      }
+
+      return field
+    }
+    const field = getField()
+
+    // розміщення човнів
+    let shipsNumber = parseInt(prompt(' кількість одиночних кораблів'))
+
+    function getShipPosition(array) {
+      for (let i = 0; i < shipsNumber;) {
+        const randPosition = Math.floor(Math.random() * array.length)
+        if (array[randPosition] !== 1) {
+          array[randPosition] = 1
+          i++
+        }
+      }
+      return array
+    }
+
+    const shipPosition = getShipPosition(field)
+
+    // бій
+    function getBattle(shipPosition) {
+      do {
+        const userValue = parseInt(prompt(`Куди стріляємо? від 0 до ${shipPosition.length - 1}`))
+        if (shipPosition[userValue] === 1) {
+          shipsNumber--
+          alert(`Ви потопили ворожий човен який знаходився на  ${userValue} позиції, лишилось  ${shipsNumber}`)
+        }
+      } while (shipsNumber > 0)
+    }
+    const battle = getBattle(field)
+
+
+    alert('Вітаю з перемогою!!!')
+    document.write(`Розміщення човнів ${shipPosition}`)
+
+  </script>
+</body>
+
+</html>

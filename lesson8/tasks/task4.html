@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №1
+  </h1>
+  <p>
+    Задача 4. Дано послідовність номерів автомобілів. Підрахувати кількість номерів, які :
+    • починаються на букву «А»;
+    • перша і остання літери співпадають;
+    • складаються з більше ніш 5 символів;
+  </p>
+  <script>
+    const autoNumbers = ['AI 45-43 BA', 'BA 32-12 AB', 'HE 12-23 CY', 'AC 34-21 KI', 'AE 12-23 CY', '12-2']
+    document.write(`${autoNumbers}   <br> <br> `)
+
+    //  Підрахувати кількість номерів, які : починаються на букву «А»;
+    function startsWithA(array) {
+      let counter = 0
+      for (let number = 0; number < array.length; number++) if (array[number][0] === 'A') counter++
+      return counter
+    }
+    const aStart = startsWithA(autoNumbers)
+    document.write(`${aStart} кількість номерів,  починаються на букву «А» <br>`)
+
+    //  Підрахувати кількість номерів, які : перша і остання літери співпадають;
+    function startsAndFinish(array) {
+      let counter = 0
+      for (let number = 0; number < array.length; number++) {
+        const numberLength = array[number].length - 1
+        if (array[number][0] === array[number][numberLength]) counter++
+      }
+      return counter
+    }
+
+    const numbers = startsAndFinish(autoNumbers)
+    document.write(`${numbers} кількість номерів,  перша і остання літери співпадають  <br>`)
+
+    //  Підрахувати кількість номерів, які :складаються з більше ніш 5 символів;
+    function moreSymbols5(array) {
+      let counter = 0
+      for (let number = 0; number < array.length; number++) {
+        for (let letter = 0; letter < array[number].length; letter++) {
+          if (letter > 5) {
+            counter++
+            break
+          }
+        }
+      }
+      return counter
+    }
+    const mySymbols = moreSymbols5(autoNumbers)
+    document.write(`${mySymbols}  кількість номерів, складаються з більше ніш 5 символів  <br>`)
+
+  </script>
+</body>
+
+</html>

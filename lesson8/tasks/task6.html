@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №1
+  </h1>
+  <p>
+    Задача 6. Дано послідовність цін товарів та назв (у окремих масивах).
+    Вивести на екран ті, які може собі дозволити користувач
+    (кількість грошей задається).
+  </p>
+  <script>
+
+    const userMoney = parseFloat(prompt('кількість грошей користувачa')),
+      productPrice = [12, 20, 23, 12, 43, 21],
+      productName = ['шкарпетки', 'ганчірка', ' швабра', 'миска', 'тарілка', 'ложка']
+
+    document.write(`Ціна товарів : ${productPrice} <br>`)
+    document.write(`найменування : ${productName} <br> <br>`)
+
+    function userCanToBy(price, product, money) {
+      let newArray = []
+      for (let i = 0; i < price.length; i++) {
+        if (money >= price[i]) {
+          newArray.push(product[i])
+        }
+      }
+      return newArray.length > 1 ? newArray : "Нічого"
+    }
+
+    const userCanBy = userCanToBy(productPrice, productName, userMoney)
+    document.write(`Товар який може собі дозволити користувач - ${userCanBy}`)
+
+
+  </script>
+</body>
+
+</html>
