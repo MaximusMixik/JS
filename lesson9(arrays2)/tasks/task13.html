@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №13
+  </h1>
+  <p>
+    Дано масив цін на товари.
+    Знайдіть середню вартість товарів
+    і створіть масив,
+    в якому будуть тільки ті ціни, які нижче середньої вартості.
+
+  </p>
+  <script>
+    const numArray = [123, 23, 32, 125, 43]
+
+    const midValue = (arr) => {
+      let sum = 0
+      arr.forEach((el, ind, arr) => sum += el)
+      midPrice = sum / arr.length
+      return midPrice
+    }
+
+    const midPriceArray = (mid, array) => {
+      const midArray = []
+      array.forEach((el) => { if (el < mid) midArray.push(el) })
+      return midArray
+    }
+
+
+    document.write(`середня вартість товарів ${midValue(numArray)} <br>
+    ціни нижчі за середню ${midPriceArray(midValue(numArray), numArray)}`)
+
+
+
+  </script>
+</body>
+
+</html>

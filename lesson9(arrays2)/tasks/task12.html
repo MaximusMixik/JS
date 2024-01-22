@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №12
+  </h1>
+  <p>
+    Дано масив чисел.
+    Знайдіть суму всіх парних чисел та створіть масив, який містить тільки парні числа.
+  </p>
+  <script>
+
+    const numArray = [12, 34, 23, 22, 32, 23, 11],
+      newNumArr = []
+
+    let sum = 0
+
+    numArray.forEach((el) => {
+      if (el % 2 === 0) {
+        newNumArr.push(el)
+        sum += el
+      }
+    })
+
+    document.write(`масив ${numArray}<br>
+    масив з парними ${newNumArr} <br>
+     сума з парними ${sum}`)
+
+
+
+  </script>
+</body>
+
+</html>

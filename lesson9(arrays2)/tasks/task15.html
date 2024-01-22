@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №15
+  </h1>
+  <p>
+    Дано масив рядків. Створіть новий масив, в якому будуть тільки ті рядки, які містять слово "JavaScript".
+  </p>
+  <script>
+    const myArray = ['hello', 'baby', 'php', 'JavaScript html', 'JavaScript']
+
+    const JavaScript = (arr) => {
+      const newArr = []
+      arr.forEach((el, ind, arr) => {
+        if (el.includes('JavaScript')) newArr.push(el)
+      })
+      return newArr
+    }
+    document.write(JavaScript(myArray))
+
+
+  </script>
+</body>
+
+</html>

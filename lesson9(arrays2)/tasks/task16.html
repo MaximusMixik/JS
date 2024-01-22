@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №16
+  </h1>
+  <p>
+    Дано масив чисел. Знайдіть та виведіть найменше число.
+
+  </p>
+  <script>
+    const numArray = [10, -20, 15, 9, 6]
+    let min = (arr) => {
+      let min = Infinity
+      numArray.forEach((el) => {
+        if (el < min) min = el
+      });
+      return min
+    }
+
+    document.write(min(numArray))
+
+
+
+  </script>
+</body>
+
+</html>

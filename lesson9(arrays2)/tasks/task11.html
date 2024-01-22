@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Задача №11
+  </h1>
+  <p>
+    Дано масив слів. Створіть новий масив, в якому будуть тільки ті слова, які мають більше 5 літер.
+  </p>
+  <script>
+    const nameArray = ['Alexey', 'Gena', 'Daniel', 'Borislav', 'David'],
+      more5Letter = []
+
+    nameArray.forEach((element) => { if (element.length > 5) more5Letter.push(element) })
+    document.write(more5Letter);
+
+  </script>
+</body>
+
+</html>
