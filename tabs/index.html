@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEST</title>
+  <style>
+    body {
+      line-height: 1;
+      font-family: fantasy;
+      color: lightseagreen;
+      letter-spacing: 0.1em;
+    }
+
+    .container {
+      max-width: 1000px;
+
+      padding-top: 80px;
+      padding-bottom: 80px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-inline: auto;
+      border: 1px solid gray;
+
+      box-sizing: border-box;
+
+      & .cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      & .about {
+        min-height: 150px;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      & h1,
+      & h2 {
+        text-align: center;
+      }
+
+      & h2 {
+        margin-top: 30px;
+      }
+
+      & img {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        object-fit: contain;
+        border: 3px solid transparent;
+        border-radius: 2px;
+        transition: border-color 0.3s ease;
+
+        &.active {
+          border: 3px solid lightseagreen;
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" id="container">
+    <h1>CHOICE YOUR CHARACTER</h1>
+    <div class="cards" id="cards"> </div>
+    <h2>SKILLS</h2>
+    <div class="about" id="about"> </div>
+  </div>
+</body>
+<script src="./images.js"></script>
+<script module src="script.js"></script>
+
+</html>
