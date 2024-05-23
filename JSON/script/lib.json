@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Molecule Man",
+    "age": 29,
+    "secret": "Dan Jukes",
+    "src": "./img/rabbit.png",
+    "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+  },
+  {
+    "name": "Madame Uppercut",
+    "age": 39,
+    "secret": "Jane Wilson",
+    "src": "./img/mouse.png",
+    "powers": [
+      "Million tonne punch",
+      "Damage resistance",
+      "Superhuman reflexes"
+    ]
+  }
+]

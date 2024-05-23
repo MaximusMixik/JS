@@ -1,0 +1,19 @@
+.card-body {
+  max-width: 800px;
+  margin-inline: auto;
+
+
+  display: grid;
+  justify-content: center;
+
+  & img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+  }
+
+  ul {
+    text-align: left;
+  }
+
+}
