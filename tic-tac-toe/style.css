@@ -1,0 +1,45 @@
+.container {
+  max-width: max-content;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+#ttt {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#ttt>div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid violet;
+
+
+  display: grid;
+  place-items: center;
+  font-size: 60px;
+}
+
+#ttt>div:nth-child(2n) {
+  background-color: lightcoral;
+  transition: background-color 0.3s ease;
+
+}
+
+
+@media (any-hover:hover) {
+  #ttt>div:hover {
+    background-color: lightgreen;
+  }
+
+
+
+}
+
+#restart {
+  display: block;
+  padding: 8px 20px;
+  max-width: max-content;
+  margin: 0 auto;
+}
