@@ -1,0 +1,159 @@
+*,
+*:after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+/* [class*='__container'] {
+  max-width: 1200px;
+  margin-inline: auto;
+} */
+
+/* !!!! */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 50;
+  color: #fff;
+}
+
+/* .header__container {} */
+
+.header__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  min-height: 60px;
+}
+
+.header__item {}
+
+.header__link {
+  transition: color 0.3s ease;
+}
+
+.header__link:active {
+  color: green;
+}
+
+@media (any-hover:hover) {
+  .header__link:hover {
+    color: greenyellow;
+  }
+}
+
+.header__link.current {
+  color: greenyellow;
+}
+
+/* !!! */
+.wrapper {}
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.page__about {
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.about__container {
+  position: relative;
+  z-index: 1;
+
+
+}
+
+.about__content {
+  padding: 80px;
+  color: white;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  display: grid;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  opacity: 0;
+  transition: opacity 0.4s ease 0.2s;
+
+}
+
+
+.show-item.active,
+.loaded #section1 .about__content {
+  opacity: 1
+}
+
+.about__title {
+  font-size: 90px;
+}
+
+
+.about__text {}
+
+.about__bg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  background: #000;
+}
+
+.about__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.about__item {}
+
+.about__text {}
+
+@media (max-width: 700px) {
+  .about__title {
+    font-size: 40px;
+  }
+
+  .about__content {
+    padding: 20px;
+    margin: 0 16px;
+  }
+
+  .about__bg img {
+    object-position: 30%;
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll animation</title>
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <nav class="header__container">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#section1" class="header__link">section1</a>
+          </li>
+          <li class="header__item">
+            <a href="#section2" class="header__link">section2</a>
+          </li>
+          <li class="header__item">
+            <a href="#section3" class="header__link">section3</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page">
+      <section id="section1" class="page__about  about">
+        <div class="about__container">
+          <div show-content class="about__content  show-item ">
+            <h2 class="about__title">
+              TITLE 1
+            </h2>
+
+            <div class="about__row">
+              <div data-counter="2000" class="about__item">
+                48
+              </div>
+              <div data-counter="2000" class="about__item">
+                -148
+              </div>
+              <div data-counter="2000" class="about__item">
+                448
+              </div>
+
+            </div>
+            <div class="about__text">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, cumque.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="about__bg">
+          <!-- loading="lazy" -->
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="./img/car.jpg">
+        </div>
+      </section>
+      <section id="section2" class="page__about  about">
+        <div class="about__container">
+          <div show-content class="about__content show-item">
+            <h2 class="about__title">
+              TITLE 2
+            </h2>
+            <div class="about__text">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, cumque.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="about__bg">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="./img/model.jpg">
+        </div>
+      </section>
+      <section id="section3" class="page__about  about">
+        <div class="about__container">
+          <div show-content class="about__content  show-item">
+            <h2 class="about__title">
+              TITLE 3
+            </h2>
+            <div class="about__row">
+              <div data-counter="2000" class="about__item">
+                148
+              </div>
+              <div data-counter="2000" class="about__item">
+                40
+              </div>
+              <div data-counter="2000" class="about__item">
+                -448
+              </div>
+            </div>
+            <div class="about__text">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, cumque.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="about__bg">
+          <!-- loading="lazy" -->
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="./img/pink.jpg">
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
