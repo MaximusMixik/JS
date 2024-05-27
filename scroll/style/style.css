@@ -119,6 +119,10 @@ a {
 
 .about__text {}
 
+.about__bg {
+  background: #000;
+}
+
 .about__bg img {
   position: absolute;
   width: 100%;
@@ -126,7 +130,6 @@ a {
   top: 0;
   left: 0;
   object-fit: cover;
-  background: #000;
 }
 
 .about__row {
