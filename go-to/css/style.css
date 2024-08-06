@@ -1,0 +1,234 @@
+*,
+*:after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+:root {
+  --text-color: #000;
+  --bg-color: #fff;
+  --header-height: 60px;
+}
+
+.dark {
+  --text-color: #fff;
+  --bg-color: #000;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+[class*=__container] {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 0 16px;
+}
+
+section {
+  scroll-margin-top: var(--header-height);
+}
+
+/* !!!! */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-color);
+  z-index: 50;
+  color: var(--text-color);
+}
+.header__container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px 40px;
+  min-height: var(--header-height);
+}
+.header__link {
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.header__link.active, .header__link:active {
+  color: green;
+}
+.header__link.active {
+  pointer-events: none;
+}
+@media (any-hover: hover) {
+  .header__link:hover {
+    color: greenyellow;
+  }
+}
+.header__link.current {
+  color: greenyellow;
+}
+.header__button {
+  background-color: transparent;
+  border: 1px solid greenyellow;
+  padding: 10px 20px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 16px;
+}
+.dark .header__button {
+  font-size: 0;
+}
+.dark .header__button::before {
+  font-size: 16px;
+  content: attr(data-light);
+}
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.page__about, .page__video {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  position: relative;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about__container {
+  position: relative;
+  z-index: 1;
+}
+.about__content {
+  padding: 80px;
+  color: var(--text-color);
+  text-align: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 16px;
+  display: grid;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.dark .about__content {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 700px) {
+  .about__content {
+    padding: 20px;
+  }
+}
+.about__title {
+  font-size: 90px;
+}
+@media (max-width: 700px) {
+  .about__title {
+    font-size: 40px;
+  }
+}
+.about__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  font-size: 40px;
+  text-align: center;
+}
+.about__bg {
+  background-color: var(--bg-color);
+}
+.about__bg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 700px) {
+  .about__bg img {
+    -o-object-position: 30%;
+       object-position: 30%;
+  }
+}
+.about__go-down {
+  font-size: 30px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  background-color: transparent;
+  border: 0;
+  color: var(--text-color);
+  place-items: center;
+  margin-inline: auto;
+  -webkit-animation: arrow-animation 1s ease infinite alternate;
+          animation: arrow-animation 1s ease infinite alternate;
+}
+@media (any-hover: hover) {
+  .about__go-down:hover {
+    color: greenyellow;
+  }
+}
+
+@-webkit-keyframes arrow-animation {
+  to {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+}
+
+@keyframes arrow-animation {
+  to {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+}
+.video video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}

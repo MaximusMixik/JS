@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Anchor | Dark mode</title>
+  <link rel="stylesheet" href="./css/style-min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="header__container">
+        <ul class="header__list">
+          <li class="header__item">
+            <a data-go-to href="#section1" class="header__link">section1</a>
+          </li>
+          <li class="header__item">
+            <a data-go-to href="#section2" class="header__link">section2</a>
+          </li>
+          <li class="header__item">
+            <a data-go-to href="#section3" class="header__link">section3</a>
+          </li>
+          <button class="header__button theme-switch" data-light="light-theme" type="button">
+            dark-theme
+          </button>
+
+        </ul>
+      </nav>
+    </header>
+    <main class="page">
+      <section id="section1" class="page__about  about">
+        <div class="about__container">
+          <div class="about__content  show-item ">
+            <h2 class="about__title title">
+              TITLE 1
+            </h2>
+
+            <div class="about__row">
+              <div class="about__item">
+                48
+              </div>
+              <div class="about__item">
+                -148
+              </div>
+              <div class="about__item">
+                448
+              </div>
+
+            </div>
+            <div class="about__text">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, cumque.
+              </p>
+            </div>
+            <!-- <a data-go-to href="#about-block" class="about__go-down">&#x2193</a> -->
+            <button data-go-to class="about__go-down">&#x2193</button>
+          </div>
+        </div>
+        <div class="about__bg">
+          <img src="./img/car.jpg" alt="car">
+        </div>
+      </section>
+      <section id="section2" class="page__about  about">
+        <div class="about__container">
+          <div class="about__content show-item">
+            <h2 class="about__title title">
+              TITLE 2
+            </h2>
+            <div class="about__text">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, cumque.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="about__bg">
+          <img alt="car" src="./img/model.jpg">
+        </div>
+      </section>
+      <section id="section3" class="page__about  about">
+        <div class="about__container">
+          <div class="about__content  show-item">
+            <h2 class="about__title title">
+              TITLE 3
+            </h2>
+            <div class="about__row">
+              <div class="about__item">
+                148
+              </div>
+              <div class="about__item">
+                40
+              </div>
+              <div class="about__item">
+                -448
+              </div>
+            </div>
+            <div class="about__text">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, cumque.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="about__bg">
+          <img alt="car" src="./img/pink.jpg">
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

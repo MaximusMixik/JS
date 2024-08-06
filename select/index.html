@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>select</title>
+  <link rel="stylesheet" href="./css/style-min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <main class="page">
+
+      <!-- <select >
+        <option value="1" selected>Пункт №1</option>
+        <option value="2">Пункт №2</option>
+        <option value="3">Пункт №3</option>
+        <option value="4">Пункт №4</option>
+      </select> -->
+
+
+      <div class="page__container">
+
+        <div class="custom-select">
+          <input type="hidden" name="custom-select-value" class="custom-select__input" value="">
+          <button class="custom-select__button">
+            <div class="custom-select__title">
+              How did you hear about us
+            </div>
+            <svg class="custom-select__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+              viewBox="0 0 32 32" fill="none">
+              <path
+                d="M15.9993 20.6666C15.6492 20.6672 15.3023 20.5986 14.9788 20.4648C14.6552 20.3309 14.3613 20.1344 14.114 19.8866L7.05664 12.828L8.94197 10.9426L15.9993 18L23.0566 10.9426L24.942 12.828L17.8846 19.8853C17.6374 20.1333 17.3435 20.3301 17.02 20.4642C16.6964 20.5983 16.3495 20.6671 15.9993 20.6666Z"
+                fill="black" />
+            </svg>
+          </button>
+          <div class="custom-select__body">
+            <ul class="custom-select__list">
+              <!-- active-item -->
+              <li data-select-value="Google" class="custom-select__item ">Google</li>
+              <li data-select-value="Facebook" class="custom-select__item">Facebook</li>
+              <li data-select-value="Friend" class="custom-select__item ">Friend</li>
+              <li data-select-value="Other" class="custom-select__item">Other</li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </main>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

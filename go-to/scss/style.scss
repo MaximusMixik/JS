@@ -1,0 +1,234 @@
+*,
+*:after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// html {
+//   scroll-behavior: smooth;
+// }
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+:root {
+  --text-color: #000;
+  --bg-color: #fff;
+
+  --header-height: 60px;
+}
+.dark {
+  --text-color: #fff;
+  --bg-color: #000;
+  transition: all 0.3s ease;
+}
+
+$text-color: var(--text-color);
+$bg-color: var(--bg-color);
+
+[class*="__container"] {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 0 16px;
+}
+
+section {
+  scroll-margin-top: var(--header-height);
+}
+
+/* !!!! */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $bg-color;
+  z-index: 50;
+  color: $text-color;
+  // .header__container
+  &__container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  // .header__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 40px;
+    // min-height: 60px;
+    min-height: var(--header-height);
+  }
+  // .header__item
+  &__item {
+  }
+  // .header__link
+  &__link {
+    transition: color 0.3s ease;
+    &.active,
+    &:active {
+      color: green;
+    }
+    &.active {
+      pointer-events: none;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: greenyellow;
+      }
+    }
+
+    &.current {
+      color: greenyellow;
+    }
+  }
+  // .header__button
+  &__button {
+    background-color: transparent;
+    border: 1px solid greenyellow;
+    padding: 10px 20px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    color: $text-color;
+    cursor: pointer;
+    font-size: 16px;
+
+    .dark & {
+      font-size: 0;
+      &::before {
+        font-size: 16px;
+        content: attr(data-light);
+      }
+    }
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  // .page__about
+  &__about {
+  }
+  // .page__video
+  &__video {
+  }
+  &__about,
+  &__video {
+    flex: 1 1 auto;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.about {
+  // .about__container
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+  // .about__content
+  &__content {
+    padding: 80px;
+    color: $text-color;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    display: grid;
+    gap: 20px;
+    // background-color: rgba($bg-color, 0.9);
+    background-color: rgba(255, 255, 255, 0.1);
+
+    .dark & {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    // opacity: 0;
+    // transition: opacity 0.4s ease 0.2s;
+    @media (max-width: 700px) {
+      padding: 20px;
+    }
+  }
+  // .about__title
+  &__title {
+    font-size: 90px;
+    @media (max-width: 700px) {
+      font-size: 40px;
+    }
+  }
+  // .about__row
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 40px;
+    text-align: center;
+  }
+  // .about__item
+  &__item {
+  }
+  // .about__text
+  &__text {
+  }
+  // .about__bg
+  &__bg {
+    background-color: $bg-color;
+  }
+  &__bg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    @media (max-width: 700px) {
+      object-position: 30%;
+    }
+  }
+
+  // .about__go-down
+  &__go-down {
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    background-color: transparent;
+    border: 0;
+    color: $text-color;
+    place-items: center;
+    margin-inline: auto;
+    animation: arrow-animation 1s ease infinite alternate;
+    @media (any-hover: hover) {
+      &:hover {
+        color: greenyellow;
+      }
+    }
+  }
+}
+
+@keyframes arrow-animation {
+  to {
+    transform: translateY(-20%);
+  }
+}
+
+.video video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
